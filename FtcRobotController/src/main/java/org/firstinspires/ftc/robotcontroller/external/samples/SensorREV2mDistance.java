@@ -55,7 +55,7 @@ import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 @Disabled
 public class SensorREV2mDistance extends LinearOpMode {
 
-    private DistanceSensor sensorRange;
+    private DistanceSensor sensorRange;        // Make an object called sensorRange
 
     @Override
     public void runOpMode() {
@@ -64,7 +64,7 @@ public class SensorREV2mDistance extends LinearOpMode {
 
         // you can also cast this to a Rev2mDistanceSensor if you want to use added
         // methods associated with the Rev2mDistanceSensor class.
-        Rev2mDistanceSensor sensorTimeOfFlight = (Rev2mDistanceSensor)sensorRange;
+        Rev2mDistanceSensor sensorTimeOfFlight = (Rev2mDistanceSensor)sensorRange;       //Cast as a REV timeofFlight sensor
 
         telemetry.addData(">>", "Press start to continue");
         telemetry.update();
@@ -77,6 +77,8 @@ public class SensorREV2mDistance extends LinearOpMode {
             telemetry.addData("range", String.format("%.01f cm", sensorRange.getDistance(DistanceUnit.CM)));
             telemetry.addData("range", String.format("%.01f m", sensorRange.getDistance(DistanceUnit.METER)));
             telemetry.addData("range", String.format("%.01f in", sensorRange.getDistance(DistanceUnit.INCH)));
+
+            telemetry.addData("range - Inches - ", sensorRange.getDistance(DistanceUnit.INCH));
 
             // Rev2mDistanceSensor specific methods.
             telemetry.addData("ID", String.format("%x", sensorTimeOfFlight.getModelID()));

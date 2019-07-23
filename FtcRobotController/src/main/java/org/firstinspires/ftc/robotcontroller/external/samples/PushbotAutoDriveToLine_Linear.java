@@ -91,7 +91,9 @@ public class PushbotAutoDriveToLine_Linear extends LinearOpMode {
 
         // Wait for the game to start (driver presses PLAY)
         // Abort this loop is started or stopped.
-        while (!(isStarted() || isStopRequested())) {
+
+
+        while (!(isStarted() || isStopRequested())) {                                       // waitForStart
 
             // Display the light level while we are waiting to start
             telemetry.addData("Light Level", lightSensor.getLightDetected());
