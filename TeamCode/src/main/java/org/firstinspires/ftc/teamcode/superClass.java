@@ -30,7 +30,6 @@ public abstract class superClass extends linearOpmode {
     public static double kI = 0.0;                              // these will be used in the PID methods
     public static double kD = 0.0;
 
-
     public DcMotor leftBack;
     public DcMotor leftFront;
     public DcMotor rightFront;
@@ -254,7 +253,6 @@ public abstract class superClass extends linearOpmode {
         parameters.angleUnit = BNO055IMU.AngleUnit.DEGREES;
         parameters.accelUnit = BNO055IMU.AccelUnit.METERS_PERSEC_PERSEC;
         parameters.calibrationDataFile = "BNO055IMUCalibration.json";
-        parameters.loggingEnabled = true;
         parameters.loggingTag = "IMU";
         parameters.accelerationIntegrationAlgorithm = new JustLoggingAccelerationIntegrator();
 
